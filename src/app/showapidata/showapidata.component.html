@@ -1,0 +1,39 @@
+<h1 class="header">API Data</h1>
+<br>
+<script src="https://use.fontawesome.com/your-embed-code.js"></script>
+<div class="container">
+  <div class="d-flex justify-content-center">
+    <div class="searchbar">
+      <input class="search_input" type="text" name="" placeholder="Search..." [(ngModel)]="searchText" >
+      <a href="../../assets/search.png" class="search_icon"><i class="fa fa-search" aria-hidden="true"></i></a>
+    </div>
+  </div>
+</div>
+<br>
+
+<table class="table table-striped table-bordered table-entry" border="1">
+  <thead>
+  <tr class="header">
+    <!-- <th>ID</th> -->
+    <th>API</th>
+    <th>Description</th>
+    <th>Auth</th>
+    <th>HTTPS</th>
+    <th>CORS</th>
+    <th>Link</th>
+    <th>Category</th>
+  </tr>
+</thead>
+<tbody class="tbody">
+  <tr *ngFor="let entry of entries | searchFilter:searchText">
+    <!-- <td>{{i+1}}</td> -->
+    <td>{{entry.API}}</td>
+    <td>{{entry.Description}}</td>
+    <td>{{entry.Auth}}</td>
+    <td>{{entry.HTTPS}}</td>
+    <td>{{entry.Cors}}</td>
+    <td>{{entry.Link}}</td>
+    <td>{{entry.Category}}</td>
+  </tr>
+</table>
+
